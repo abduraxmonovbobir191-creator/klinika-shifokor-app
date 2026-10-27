@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'router.dart';
 
 void main() {
   runApp(const GavxarDoctorApp());
@@ -11,7 +12,7 @@ class GavxarDoctorApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Gavxar Clinic - Shifokor',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -34,7 +35,7 @@ class GavxarDoctorApp extends StatelessWidget {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         ),
       ),
-      home: const DoctorHomeScreen(),
+      routerConfig: doctorRouter,
     );
   }
 }
